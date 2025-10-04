@@ -1,0 +1,99 @@
+{% extends 'MediplusApp/base.html' %}
+{% load static %}
+{% block title %} About {% endblock title %}
+{% block body %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    header {
+        background-color: #0044cc;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    header h1 {
+        margin: 0;
+    }
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    h2 {
+        color: #333;
+    }
+    p {
+        font-size: 1.1em;
+        color: #555;
+    }
+    .features {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 40px;
+    }
+    .feature {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        text-align: center;
+        width: 30%;
+        border-radius: 8px;
+    }
+    .feature h3 {
+        color: #0044cc;
+    }
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 15px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+<div class="container">
+    <section>
+        <h2>About MediPlus</h2>
+        <p>MediPlus is an innovative mobile application designed to simplify and enhance your healthcare experience. Whether you're looking for medical advice, scheduling appointments, or tracking your health, MediPlus brings everything to your fingertips.</p>
+        <p>Our mission is to make healthcare accessible, efficient, and personalized for everyone. We believe that with the right tools, managing your health can be easier and more convenient.</p>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h3>Instant Consultations</h3>
+            <p>Access expert healthcare providers from the comfort of your home with our video and chat consultations.</p>
+        </div>
+        <div class="feature">
+            <h3>Health Records</h3>
+            <p>Keep all your health records, prescriptions, and appointments organized and easily accessible.</p>
+        </div>
+        <div class="feature">
+            <h3>Personalized Health Plans</h3>
+            <p>Receive customized health and wellness plans tailored to your unique needs and goals.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Our Values</h2>
+        <p>At MediPlus, we are committed to:</p>
+        <ul>
+            <li><strong>Quality Healthcare:</strong> Providing access to trusted medical professionals and healthcare resources.</li>
+            <li><strong>Security:</strong> Ensuring your personal health data is kept safe and confidential.</li>
+            <li><strong>Convenience:</strong> Allowing you to manage your health at your own pace, from anywhere.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Contact Us</h2>
+        <p>If you have any questions or feedback, feel free to reach out to us:</p>
+        <p>Email: <a href="mailto:support@mediplus.com">support@mediplus.com</a></p>
+        <p>Phone: +1 (555) 123-4567</p>
+    </section>
+</div>
+{% endblock body %}

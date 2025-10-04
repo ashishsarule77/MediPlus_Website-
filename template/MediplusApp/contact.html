@@ -1,0 +1,254 @@
+{% extends 'MediplusApp/base.html' %}
+{% load static %}
+{% block title %} Contact {% endblock title %}
+{% block body %}
+<form method="post">
+    {% csrf_token %}
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
+
+            <div class="indicator">
+                <svg width="16px" height="12px">
+                    <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    <!-- Get Pro Button -->
+    <ul class="pro-features">
+        <a class="get-pro" href="#">Get Pro</a>
+        <li class="big-title">Pro Version Available on Themeforest</li>
+        <li class="title">Pro Version Features</li>
+        <li>2+ premade home pages</li>
+        <li>20+ html pages</li>
+        <li>Color Plate With 12+ Colors</li>
+        <li>Sticky Header / Sticky Filters</li>
+        <li>Working Contact Form With Google Map</li>
+        <div class="button">
+            <a href="http://preview.themeforest.net/item/mediplus-medical-and-doctor-html-template/full_screen_preview/26665910?_ga=2.145092285.888558928.1591971968-344530658.1588061879"
+                target="_blank" class="btn">Pro Version Demo</a>
+            <a href="https://themeforest.net/item/mediplus-medical-and-doctor-html-template/26665910" target="_blank"
+                class="btn">Buy Pro Version</a>
+        </div>
+    </ul>
+
+    <!-- Header Area -->
+    <header class="header">
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-5 col-12">
+                        <!-- Contact -->
+                        <ul class="top-link">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Doctors</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                        <!-- End Contact -->
+                    </div>
+                    <div class="col-lg-6 col-md-7 col-12">
+                        <!-- Top Contact -->
+                        <ul class="top-contact">
+                            <li><i class="fa fa-phone"></i>+880 1234 56789</li>
+                            <li><i class="fa fa-envelope"></i><a
+                                    href="mailto:support@yourmail.com">support@yourmail.com</a>
+                            </li>
+                        </ul>
+                        <!-- End Top Contact -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Topbar -->
+        <!-- Header Inner -->
+        <div class="header-inner">
+            <div class="container">
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-12">
+                            <!-- Start Logo -->
+                            <div class="logo">
+                                <a href="index.html"><img src="{% static 'MediplusApp/img/logo.png' %}" alt="#"></a>
+                            </div>
+                            <!-- End Logo -->
+                            <!-- Mobile Nav -->
+                            <div class="mobile-nav"></div>
+                            <!-- End Mobile Nav -->
+                        </div>
+                        <div class="col-lg-7 col-md-9 col-12">
+                            <!-- Main Menu -->
+                            <div class="main-menu">
+                                <nav class="navigation">
+                                    <ul class="nav menu">
+                                        <li class="active"><a href="#">Home <i class="icofont-rounded-down"></i></a>
+                                            <ul class="dropdown">
+                                                <li><a href="index.html">Home Page 1</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Doctos </a></li>
+                                        <li><a href="#">Services </a></li>
+                                        <li><a href="#">Pages <i class="icofont-rounded-down"></i></a>
+                                            <ul class="dropdown">
+                                                <li><a href="404.html">404 Error</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
+                                            <ul class="dropdown">
+                                                <li><a href="blog-single.html">Blog Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!--/ End Main Menu -->
+                        </div>
+                        <div class="col-lg-2 col-12">
+                            <div class="get-quote">
+                                <a href="appointment.html" class="btn">Book Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Header Inner -->
+    </header>
+    <!-- End Header Area -->
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs overlay">
+        <div class="container">
+            <div class="bread-inner">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Contact Us</h2>
+                        <ul class="bread-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><i class="icofont-simple-right"></i></li>
+                            <li class="active">Contact Us</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <!-- Start Contact Us -->
+    <section class="contact-us section">
+        <div class="container">
+            <div class="inner">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="contact-us-left">
+                            <!--Start Google-map -->
+                            <div id="myMap">
+
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3587661.626701238!2d72.70180218749996!3d28.582498000000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45fa267c455%3A0x20e02d4622605a21!2sCETPA%20INFOTECH%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1736398384057!5m2!1sen!2sin"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <!--/End Google-map -->
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="contact-us-form">
+                            <h2>Contact With Us</h2>
+                            <p>If you have any questions please fell free to contact with us.</p>
+                            <!-- Form -->
+                            <form class="form" method="post" action="mail/mail.php">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="name" placeholder="Name" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="email" name="email" placeholder="Email" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="phone" placeholder="Phone" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="subject" placeholder="Subject" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <textarea name="message" placeholder="Your Message" required=""></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group login-btn">
+                                            <button class="btn" type="submit" name="btnsubmit">Send</button>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label class="checkbox-inline" for="2"><input name="news" id="2"
+                                                    type="checkbox">Do you want to subscribe our Newsletter ?</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <!--/ End Form -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="row">
+                    <!-- single-info -->
+                    <div class="col-lg-4 col-12 ">
+                        <div class="single-info">
+                            <i class="icofont icofont-ui-call"></i>
+                            <div class="content">
+                                <h3>+91- 0000000011</h3>
+                                <p>info@company.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/End single-info -->
+                    <!-- single-info -->
+                    <div class="col-lg-4 col-12 ">
+                        <div class="single-info">
+                            <i class="icofont-google-map"></i>
+                            <div class="content">
+                                <h3>2 Fir e Brigade Road</h3>
+                                <p>Chittagonj, Lakshmipur</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/End single-info -->
+                    <!-- single-info -->
+                    <div class="col-lg-4 col-12 ">
+                        <div class="single-info">
+                            <i class="icofont icofont-wall-clock"></i>
+                            <div class="content">
+                                <h3>Mon - Sat: 8am - 5pm</h3>
+                                <p>Sunday Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/End single-info -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ End Contact Us -->
+</form>
+
+{% endblock body%}
